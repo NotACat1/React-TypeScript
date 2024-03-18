@@ -1,18 +1,32 @@
-// Импортируем React и ReactDOM из соответствующих пакетов
-import React, { StrictMode } from 'react';
+// Подключение библиотек
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// Импортируем стили для нашего приложения
-import 'normalize.css';
-import './index.css';
+// Подключение Redux
+import { Provider } from 'react-redux';
+import { store } from 'services/store';
 
-// Импортируем функцию reportWebVitals для отслеживания производительности нашего веб-приложения
+// Подключение компонентов
+import App from 'components/app/app';
+
+// Подключение таблиц стилей и функций
+import 'normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root');
+
+// Рендеринг основного компонента
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
-  root.render(<React.StrictMode></React.StrictMode>);
+  root.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>,
+  );
 }
 
 // If you want to start measuring performance in your app, pass a function
