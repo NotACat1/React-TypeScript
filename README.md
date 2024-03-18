@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Шаблон проекта React Redux TypeScript
 
-## Available Scripts
+Этот шаблонный проект предназначен для быстрого старта разработки приложений на React с использованием управления состоянием Redux и TypeScript. Он также предварительно настроен с использованием различных инструментов для обеспечения качества кода и удобства разработки, таких как линтеры, хуки коммитов и т.д.
 
-In the project directory, you can run:
+## Особенности
 
-### `npm start`
+**React и Redux:** React используется для создания пользовательских интерфейсов, а Redux - для эффективного управления состоянием приложения. Это позволяет организовать код в приложении таким образом, чтобы он был более предсказуемым и легко масштабируемым.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**TypeScript:** Использование TypeScript обеспечивает статическую типизацию, что помогает предотвратить множество ошибок на этапе разработки и повысить общее качество кода.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Инструменты линтинга:** Проект настроен с использованием ESLint для линтинга JavaScript и TypeScript кода, а также Stylelint для линтинга CSS и SCSS файлов. Эти инструменты помогают поддерживать единообразие кода, выявлять потенциальные проблемы и улучшать читаемость кода.
 
-### `npm test`
+**Автоматическое форматирование кода:** Prettier включен для автоматического форматирования кода, что позволяет избежать дискуссий о стиле кода в команде разработчиков и обеспечивает единообразие в стиле кодирования.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Хуки коммитов:** Используя Commitlint и Husky, проект настроен на проверку сообщений коммитов перед их фиксацией. Это гарантирует соблюдение определенных соглашений о формате коммитов и улучшает читаемость истории коммитов.
 
-### `npm run build`
+## Начало работы
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Установка
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Клонируйте репозиторий:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/NotACat1/React-TypeScript.git
+```
 
-### `npm run eject`
+Установите зависимости:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Запуск
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Запустите сервер разработки:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run start
+```
 
-## Learn More
+Теперь вы готовы начать разработку вашего приложения React на основе этого шаблона.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Доступные скрипты
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+После установки проекта вы можете использовать следующие скрипты:
 
-### Code Splitting
+```
+"start": "react-scripts start"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Этот скрипт запускает приложение в режиме разработки. Он использует `react-scripts`, который обеспечивает сборку проекта и запуск локального сервера для разработки.
 
-### Analyzing the Bundle Size
+```
+"build": "react-scripts build"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Этот скрипт создает оптимизированную сборку приложения для производства. Он также использует `react-scripts` для сборки проекта, но результаты сохраняются в каталоге `build`.
 
-### Making a Progressive Web App
+```
+"test": "react-scripts test"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Этот скрипт запускает тестовый раннер для вашего приложения. Он также использует `react-scripts` для запуска тестов в интерактивном режиме просмотра.
 
-### Advanced Configuration
+```
+"eject": "react-scripts eject"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Этот скрипт используется для "извлечения" конфигурации `react-scripts`. Когда вы выполняете этот скрипт, все настройки и зависимости `react-scripts` будут скопированы в ваш проект, и вы сможете их настраивать по своему усмотрению.
 
-### Deployment
+```
+"predeploy": "npm run build"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Этот скрипт запускается перед развертыванием (deploy). В данном случае он просто запускает скрипт `build`, чтобы убедиться, что перед развертыванием приложение собрано.
 
-### `npm run build` fails to minify
+```
+"deploy": "gh-pages -d build"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Этот скрипт используется для развертывания вашего приложения на GitHub Pages. Он использует инструмент `gh-pages`, чтобы опубликовать содержимое каталога `build` вашего проекта на GitHub Pages.
+
+```
+"husky-inst": "npx husky install && chmod +x .husky/pre-commit .husky/commit-msg"
+```
+
+Этот скрипт используется для установки Husky и настройки его хуков. Он использует `npx husky install`, чтобы установить Husky, и `chmod +x` для установки прав на выполнение скриптов `pre-commit` и `commit-msg`.
+
+```
+"msg-commit": "npx commitlint -E HUSKY_GIT_PARAMS"
+```
+
+Этот скрипт используется для проверки сообщений коммитов перед фиксацией. Он использует инструмент `commitlint`, чтобы проверить формат сообщения коммита.
+
+```
+"lint": "npx lint-staged"
+```
+
+Этот скрипт используется для линтинга измененных файлов перед коммитом. Он использует инструмент `lint-staged`, чтобы линтить только те файлы, которые были изменены, ускоряя процесс линтинга.
+
+## Участие в разработке
+
+Мы приветствуем ваши вклады в этот проект. Вы можете помочь нам, отправляя отчеты о найденных ошибках, предложения по улучшению функциональности или запросы на внесение изменений.
